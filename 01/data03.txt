@@ -1,0 +1,1203 @@
+[
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Toledo"
+      },
+      "edad": 22,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 45,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 31,
+      "contacto": {
+        "email": "jose@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 40,
+      "contacto": {
+        "email": "sofia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 44,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 42,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 61,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Toledo"
+      },
+      "edad": 23,
+      "contacto": {
+        "email": "sofia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 19,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 23,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 26,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 60,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 30,
+      "contacto": {
+        "email": "lucia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 57,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 43,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 35,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 61,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 52,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 26,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 18,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 21,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Toledo"
+      },
+      "edad": 65,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Toledo"
+      },
+      "edad": 64,
+      "contacto": {
+        "email": "lucia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 33,
+      "contacto": {
+        "email": "jose@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 30,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 34,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 24,
+      "contacto": {
+        "email": "sofia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 47,
+      "contacto": {
+        "email": "laura@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 43,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 55,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 38,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 55,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 51,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 47,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 30,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 42,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 35,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 50,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 63,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 39,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 47,
+      "contacto": {
+        "email": "laura@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 55,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 59,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 62,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 32,
+      "contacto": {
+        "email": "laura@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 44,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 56,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 30,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 23,
+      "contacto": {
+        "email": "laura@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 48,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 58,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 52,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 51,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 49,
+      "contacto": {
+        "email": "jose@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Toledo"
+      },
+      "edad": 46,
+      "contacto": {
+        "email": "sofia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 33,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 28,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 18,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 57,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 30,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 37,
+      "contacto": {
+        "email": "laura@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 28,
+      "contacto": {
+        "email": "lucia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 34,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 61,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 55,
+      "contacto": {
+        "email": "sofia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 52,
+      "contacto": {
+        "email": "jose@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 21,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 62,
+      "contacto": {
+        "email": "laura@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Toledo"
+      },
+      "edad": 41,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 27,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 32,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 23,
+      "contacto": {
+        "email": "sofia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 65,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 24,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 28,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 58,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Valencia"
+      },
+      "edad": 42,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Mar\u00eda",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 47,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 37,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 63,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Jos\u00e9",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 35,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 22,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 21,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 63,
+      "contacto": {
+        "email": "jose@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 38,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 61,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "Barcelona"
+      },
+      "edad": 54,
+      "contacto": {
+        "email": "maria@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 59,
+      "contacto": {
+        "email": "lucia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Ana",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 38,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Pedro",
+      "ubicacion": {
+        "ciudad": "Sevilla"
+      },
+      "edad": 41,
+      "contacto": {
+        "email": "luis@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 57,
+      "contacto": {
+        "email": "pedro@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luis",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 49,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 46,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Laura",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 62,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Granada"
+      },
+      "edad": 62,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Bilbao"
+      },
+      "edad": 21,
+      "contacto": {
+        "email": "lucia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Miguel",
+      "ubicacion": {
+        "ciudad": "M\u00e1laga"
+      },
+      "edad": 28,
+      "contacto": {
+        "email": "ana@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Sof\u00eda",
+      "ubicacion": {
+        "ciudad": "Madrid"
+      },
+      "edad": 19,
+      "contacto": {
+        "email": "miguel@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Carlos",
+      "ubicacion": {
+        "ciudad": "Salamanca"
+      },
+      "edad": 52,
+      "contacto": {
+        "email": "lucia@example.com"
+      }
+    }
+  },
+  {
+    "persona": {
+      "nombre": "Luc\u00eda",
+      "ubicacion": {
+        "ciudad": "Zaragoza"
+      },
+      "edad": 31,
+      "contacto": {
+        "email": "carlos@example.com"
+      }
+    }
+  }
+]
+
