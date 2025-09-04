@@ -1,5 +1,6 @@
 # lab01
 import pandas as pd
+import re
 
 
 df_csv = pd.read_csv('datos_estructurados.csv')
@@ -20,4 +21,5 @@ patron = r"(\\w+) (?:vive|reside|está) en (\\w+) y tiene (\\d+) años"
 datos_extraidos = re.findall(patron, texto)
 df_texto = pd.DataFrame(datos_extraidos, columns=['Nombre', 'Ciudad', 'Edad'])
 print(df_texto)
+
 print(df_texto.info())
