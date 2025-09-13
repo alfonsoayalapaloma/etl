@@ -1,0 +1,194 @@
+Configuracion Pentaho 9.4
+
+Requiere Java 11 o superior.
+
+Descarga Pentaho 
+https://hitachiedge1.jfrog.io/artifactory/pntpub-maven-release-cache/org/pentaho/di/pdi-ce/9.4.0.0-343/pdi-ce-9.4.0.0-343.zip
+
+Extrae el contenido del zip.
+
+Configura java 11
+https://jdk.java.net/archive/
+
+Adiciona al comienzo  del archivo "set-pentaho-env.bat". Los XXX representan el path hasta el jdk 
+set PENTAHO_JAVA_HOME="XXX\jdk-11.0.2"
+set _PENTAHO_JAVA_HOME="XXX\jdk-11.0.2"
+
+---
+
+# 🧰 Taller: Carga y Transformación de Datos con Pentaho Data Integration 9
+
+---
+
+## 🎯 Objetivo
+
+Aprender a cargar un archivo CSV, realizar limpieza y transformaciones, y poblar una tabla de hechos (`FACT_venta`) en un modelo dimensional usando **Pentaho Data Integration (PDI) 9**.
+
+---
+
+## 📁 Archivo Origen
+
+```csv
+transaccion_id,Nombre_producto,Cantidad,Precio_unitario,total_pagado,metodo_pago,localizacion,fecha_transaccion
+TXN_1961373,Coffee,2,2.0,4.0,Credit Card,Takeaway,2023-09-08
+TXN_4977031,Cake,4,3.0,12.0,Cash,In-store,2023-05-16
+TXN_4271903,Cookie,4,1.0,ERROR,Credit Card,In-store,2023-07-19
+TXN_7034554,Salad,2,5.0,10.0,UNKNOWN,UNKNOWN,2023-04-27
+TXN_3160411,Coffee,2,2.0,4.0,Digital Wallet,In-store,2023-06-11
+TXN_2602893,Smoothie,5,4.0,20.0,Credit Card,,2023-03-31
+TXN_4433211,UNKNOWN,3,3.0,9.0,ERROR,Takeaway,2023-10-06
+TXN_6699534,Sandwich,4,4.0,16.0,Cash,UNKNOWN,2023-10-28
+```
+
+---
+
+## 🧱 Tabla Destino: FACT_venta
+
+```sql
+CREATE TABLE FACT_venta (
+  venta_id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+  cliente_id INTEGER,
+  producto_id INTEGER,
+  tiempo_id NUMBER,
+  cantidad REAL,
+  valor_unitario REAL,
+  valor_total REAL,
+  transaccion_id TEXT,
+  metodo_pago TEXT,
+  CONSTRAINT FACT_venta_DIM_cliente_FK FOREIGN KEY (cliente_id) REFERENCES DIM_cliente(cliente_id),
+  CONSTRAINT FACT_venta_DIM_producto_FK FOREIGN KEY (producto_id) REFERENCES DIM_producto(producto_id),
+  CONSTRAINT FACT_venta_DIM_tiempo_FK FOREIGN KEY (tiempo_id) REFERENCES DIM_tiempo(tiempo_id)
+);
+```
+
+Configuracion de la base de datos en Pentaho:
+
+Connection Name: SQLite_Connection
+Connection Type: Generic database
+Access: Native (JDBC)
+Driver class name: org.sqlite.JDBC
+URL: jdbc:sqlite:/ruta/completa/a/tu_base_de_datos.db
+
+
+# 🎯 Parte 1: Cargar los nombres de producto a la tabla DIM_productos
+
+---
+
+## 🔧 Paso 1: Crear Transformación en Spoon
+
+1. Abrir **Pentaho Spoon**.
+2. Crear una nueva transformación (`.ktr`).
+3. Agregar un paso **CSV File Input**:
+   - Selecciona el archivo origen.
+   - Define los campos y tipos:
+     - `transaccion_id`: String
+     - `Nombre_producto`: String
+     - `Cantidad`: Number
+     - `Precio_unitario`: Number
+     - `total_pagado`: Number
+     - `metodo_pago`: String
+     - `localizacion`: String
+     - `fecha_transaccion`: Date (`yyyy-MM-dd`)
+
+---
+
+## 🧼 Paso 2: Encontrar nombres de producto unicos
+
+1. Usa **Select Values** para seleccionar la columna Nombre_producto.
+2. Usa "Sort Rows" para ordenar la columna seleccionada.
+3. Usa "Unique Rows" para dejar solo valores unicos.
+4. Usa "Filter Rows" para dejar pasar los NO-NULL y utiliza "Dummy" para no hacer nada en caso que sea NULL
+
+## 🗃️ Paso 3: Carga en la Tabla DIM_producto
+
+1. Agrega un paso **Insert/Update**:
+   - Selecciona la tabla  Target_Table:   `DIM_producto`.
+   - Mapea los campos:
+     - The keys to look up the values  `nombre` → `Nombre_producto`
+     - Update Fields: `nombre` → `Nombre_producto`
+     
+
+
+---
+
+
+
+# 🎯 Parte 2: Cargar  la tabla FACT_venta
+
+---
+
+## 🔧 Paso 1: Crear Transformación en Spoon
+
+1. Abrir **Pentaho Spoon**.
+2. Crear una nueva transformación (`.ktr`).
+3. Agregar un paso **CSV File Input**:
+   - Selecciona el archivo origen.
+   - Define los campos y tipos:
+     - `transaccion_id`: String
+     - `Nombre_producto`: String
+     - `Cantidad`: Number
+     - `Precio_unitario`: Number
+     - `total_pagado`: Number
+     - `metodo_pago`: String
+     - `localizacion`: String
+     - `fecha_transaccion`: Date (`yyyy-MM-dd`)
+
+---
+
+
+## 🧼 Paso 2: Limpieza de Datos
+
+1. Agrega un paso **Filter Rows**:
+   - Filtra registros donde `total_pagado`, `metodo_pago`, `localizacion` o `Nombre_producto` sean `"ERROR"` o `"UNKNOWN"`.
+
+2. Agrega un paso **Modified JavaScript Value**:
+   - Recalcula `valor_total` si `total_pagado` es inválido:
+     ```javascript
+     if (isNaN(total_pagado)) {
+       valor_total = Cantidad * Precio_unitario;
+     } else {
+       valor_total = total_pagado;
+     }
+     ```
+
+3. Usa **Select Values** para convertir `fecha_transaccion` a tipo fecha.
+
+---
+
+## 🔗 Paso 3: Mapeo de Claves Foráneas
+
+1. Agrega pasos **Stream Lookup** para buscar:
+   - `cliente_id` desde `DIM_cliente` usando `localizacion` o reglas de negocio.
+   - `producto_id` desde `DIM_producto` usando `Nombre_producto`.
+   - `tiempo_id` desde `DIM_tiempo` usando `fecha_transaccion`.
+
+2. Configura los campos de salida para poblar la tabla `FACT_venta`.
+
+---
+
+## 🗃️ Paso 4: Carga en la Tabla FACT_venta
+
+1. Agrega un paso **Table Output**:
+   - Selecciona la tabla `FACT_venta`.
+   - Mapea los campos:
+     - `Cantidad` → `cantidad`
+     - `Precio_unitario` → `valor_unitario`
+     - `valor_total` → `valor_total`
+     - `transaccion_id` → `transaccion_id`
+     - `metodo_pago` → `metodo_pago`
+     - `cliente_id`, `producto_id`, `tiempo_id` → claves foráneas
+
+---
+
+## 🧪 Actividades del Taller
+
+1. ¿Cuántos registros fueron excluidos por contener `"ERROR"` o `"UNKNOWN"`?
+2. ¿Cuántos registros tuvieron que recalcular `valor_total`?
+3. ¿Qué porcentaje de registros no encontraron coincidencia en las dimensiones?
+4. ¿Cómo se puede mejorar la calidad del archivo origen para futuras cargas?
+
+---
+
+
+
+
