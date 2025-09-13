@@ -1,1 +1,99 @@
+---
+
+## 🧹 Taller de Limpieza de Datos con Dataiku
+
+### 📘 Objetivo
+Aprender a identificar, tratar y corregir errores comunes en un dataset de transacciones usando **Dataiku DSS**, aplicando buenas prácticas de limpieza de datos.
+
+---
+
+### 📦 Dataset: Transacciones de Productos
+
+```csv
+transaccion_id,Nombre_producto,Cantidad,Precio_unitario,total_pagado,metodo_pago,localizacion,fecha_transaccion
+TXN_1961373,Coffee,2,2.0,4.0,Credit Card,Takeaway,2023-09-08
+TXN_4977031,Cake,4,3.0,12.0,Cash,In-store,2023-05-16
+...
+```
+
+---
+
+### 🛠️ Paso 1: Cargar el Dataset en Dataiku
+
+1. Crear un nuevo proyecto en Dataiku DSS.
+2. Importar el archivo CSV como un dataset.
+3. Visualizar los datos en el explorador de Dataiku.
+
+---
+
+### 🔍 Paso 2: Identificar Problemas Comunes
+
+Usa el **análisis de calidad de columnas** para detectar:
+
+- Valores faltantes (`null`)
+- Valores erróneos (`ERROR`, `UNKNOWN`)
+- Inconsistencias en tipos de datos (por ejemplo, texto en campos numéricos)
+
+---
+
+### 🧼 Paso 3: Limpieza de Datos
+
+#### 3.1. Reemplazar valores erróneos
+
+Usa el **Prepare Recipe** para:
+
+- Reemplazar `"ERROR"` y `"UNKNOWN"` por `null` en las columnas que lo requieran.
+- Normalizar nombres de productos y métodos de pago.
+
+```python
+# Ejemplo en Dataiku Prepare Recipe
+IF Nombre_producto == "ERROR" THEN Nombre_producto = null
+IF metodo_pago == "UNKNOWN" THEN metodo_pago = "Sin información"
+```
+
+#### 3.2. Validar cálculos
+
+Crear una columna calculada para verificar si `Cantidad * Precio_unitario == total_pagado`.
+
+```python
+total_calculado = Cantidad * Precio_unitario
+```
+
+Luego, comparar con `total_pagado` y marcar discrepancias.
+
+---
+
+### 📅 Paso 4: Validar Fechas
+
+- Convertir `fecha_transaccion` a tipo fecha.
+- Filtrar registros con fechas inválidas o vacías.
+- Verificar que las fechas estén dentro de un rango lógico (por ejemplo, año 2023).
+
+---
+
+### 📊 Paso 5: Generar Reporte de Calidad
+
+Usa el plugin de **Data Quality** para:
+
+- Ver porcentaje de valores faltantes por columna.
+- Ver registros duplicados.
+- Exportar un resumen de limpieza.
+
+---
+
+### ✅ Paso 6: Guardar Dataset Limpio
+
+- Guardar el dataset limpio como una nueva versión.
+- Documentar los pasos realizados en el proyecto.
+
+---
+
+### 🎓 Actividades del Taller
+
+1. ¿Cuántos registros tienen errores en el campo `total_pagado`?
+2. ¿Qué porcentaje de transacciones no tienen método de pago?
+3. ¿Cuántos productos tienen nombre `UNKNOWN` o están vacíos?
+4. ¿Cuántas fechas están mal formateadas o vacías?
+
+---
 
