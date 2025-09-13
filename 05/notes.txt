@@ -7,7 +7,7 @@ Aprender a identificar, tratar y corregir errores comunes en un dataset de trans
 
 ---
 
-### 📦 Dataset: Transacciones de Productos
+### 📦 Dataset: Ventas
 
 ```csv
 transaccion_id,Nombre_producto,Cantidad,Precio_unitario,total_pagado,metodo_pago,localizacion,fecha_transaccion
@@ -30,9 +30,18 @@ TXN_4977031,Cake,4,3.0,12.0,Cash,In-store,2023-05-16
 
 Usa el **análisis de calidad de columnas** para detectar:
 
+
 - Valores faltantes (`null`)
 - Valores erróneos (`ERROR`, `UNKNOWN`)
 - Inconsistencias en tipos de datos (por ejemplo, texto en campos numéricos)
+
+Revisa las columnas:
+- Cantidad
+- Precio_unitario 
+- total_pagado
+- Nombre_producto
+- Localizacion
+- metodo_pago
 
 ---
 
@@ -43,23 +52,21 @@ Usa el **análisis de calidad de columnas** para detectar:
 Usa el **Prepare Recipe** para:
 
 - Reemplazar `"ERROR"` y `"UNKNOWN"` por `null` en las columnas que lo requieran.
-- Normalizar nombres de productos y métodos de pago.
+- Normalizar nombres de productos y metodo_pago.
 
 ```python
-# Ejemplo en Dataiku Prepare Recipe
 IF Nombre_producto == "ERROR" THEN Nombre_producto = null
-IF metodo_pago == "UNKNOWN" THEN metodo_pago = "Sin información"
+IF metodo_pago == "UNKNOWN" THEN metodo_pago = null
 ```
 
 #### 3.2. Validar cálculos
 
-Crear una columna calculada para verificar si `Cantidad * Precio_unitario == total_pagado`.
+Crear una formula condicional si el total_pagado no esta definido, entonces `Cantidad * Precio_unitario == total_pagado`.
 
 ```python
-total_calculado = Cantidad * Precio_unitario
+total_pagado = Cantidad * Precio_unitario
 ```
-
-Luego, comparar con `total_pagado` y marcar discrepancias.
+Hacer formulas para Cantidad y Precio_unitario cuando las otras dos variables existan.
 
 ---
 
