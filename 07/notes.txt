@@ -13,20 +13,35 @@ Aprender a cargar un archivo CSV, realizar limpieza y transformaciones, y poblar
 
 ## Configuracion
 
-Configuracion Pentaho 9.4
+Para MAC: version pdi-ce-10.2.0.0-222.zip
+https://pentaho.com/pentaho-developer-edition/#communityProducts
+
+Abrir una terminal:
+1. Usa Command+BarraEspaciadora.
+2. Escribe Terminal
+
+En la terminal
+1. Cambiarse al directorio data-integration:  cd /Users/Estudiantes/Downloads/data-integration
+2. Correr spoon.sh:  sh spoon.sh
+
+
+Para WINDOWS: Configuracion Pentaho 9.4
 
 Requiere Java 11 o superior.
-
-Descarga Pentaho 
-https://hitachiedge1.jfrog.io/artifactory/pntpub-maven-release-cache/org/pentaho/di/pdi-ce/9.4.0.0-343/pdi-ce-9.4.0.0-343.zip
-Extrae el contenido del zip.
 
 Configura java 11
 https://jdk.java.net/archive/
 
+Descarga Pentaho 
+Para windows version 9.4
+https://hitachiedge1.jfrog.io/artifactory/pntpub-maven-release-cache/org/pentaho/di/pdi-ce/9.4.0.0-343/pdi-ce-9.4.0.0-343.zip
+Extrae el contenido del zip.
+
 Adiciona al comienzo  del archivo "set-pentaho-env.bat". Los XXX representan el path hasta el jdk 
 set PENTAHO_JAVA_HOME="XXX\jdk-11.0.2"
 set _PENTAHO_JAVA_HOME="XXX\jdk-11.0.2"
+
+
 
 
 ## 📁 Archivo Origen
