@@ -167,9 +167,11 @@ Ejemplo: jdbc:sqlite:/sf/etl/08/dwh.db
      - `precio_unitario: String
      - `SKU`: String
      - `categoria_id`: String
+
+## 🗃️ Paso 4: Carga en la Tabla DIM_producto
  
 
-7. Agrega un paso **Update**:
+1. Agrega un paso **Insert/Update**:
   - Define la conexion a Sqlite:
     
   - Define los campos:
@@ -186,25 +188,11 @@ Ejemplo: jdbc:sqlite:/sf/etl/08/dwh.db
 
 
 
-     
-
-
-## 🗃️ Paso 4: Carga en la Tabla DIM_producto
-
-1. Agrega un paso **Insert/Update**:
-   - Selecciona la tabla  Target_Table:   `DIM_producto`.
-   - Mapea los campos:
-     - The keys to look up the values  `nombre` → `Nombre_producto`
-     - Update Fields: `nombre` → `Nombre_producto`
-     
-
-
-
 ---
 
 
 
-# 🎯 Parte 2: Cargar  la tabla FACT_venta
+# 🎯 Parte 2: Crear una transformacion para cargue de la tabla FACT
 
 ---
 
@@ -229,29 +217,18 @@ Ejemplo: jdbc:sqlite:/sf/etl/08/dwh.db
 
 ## 🧼 Paso 2: Limpieza de Datos
 
-1. Agrega un paso **Filter Rows**:
-   - Filtra registros donde `total_pagado`, `metodo_pago`, `localizacion` o `Nombre_producto` sean `"ERROR"` o `"UNKNOWN"`.
+1. Agrega un paso **Replace in String**:
+   -Reemplaza  `"ERROR"` por `"UNKNOWN"`.
 
-2. Agrega un paso **Modified JavaScript Value**:
-   - Recalcula `valor_total` si `total_pagado` es inválido:
-     ```javascript
-     if (isNaN(total_pagado)) {
-       valor_total = Cantidad * Precio_unitario;
-     } else {
-       valor_total = total_pagado;
-     }
-     ```
-
-3. Usa **Select Values** para convertir `fecha_transaccion` a tipo fecha.
+2. Agrega un paso **Filter**:
+   - Filtra donde los valores de total_pagado sean ERROR, UNKNOWN o NULL
 
 ---
 
 ## 🔗 Paso 3: Mapeo de Claves Foráneas
 
 1. Agrega pasos **Stream Lookup** para buscar:
-   - `cliente_id` desde `DIM_cliente` usando `localizacion` o reglas de negocio.
    - `producto_id` desde `DIM_producto` usando `Nombre_producto`.
-   - `tiempo_id` desde `DIM_tiempo` usando `fecha_transaccion`.
 
 2. Configura los campos de salida para poblar la tabla `FACT_venta`.
 
@@ -261,21 +238,13 @@ Ejemplo: jdbc:sqlite:/sf/etl/08/dwh.db
 
 1. Agrega un paso **Table Output**:
    - Selecciona la tabla `FACT_venta`.
+     specify database fields-
    - Mapea los campos:
-     - `Cantidad` → `cantidad`
-     - `Precio_unitario` → `valor_unitario`
-     - `valor_total` → `valor_total`
-     - `transaccion_id` → `transaccion_id`
-     - `metodo_pago` → `metodo_pago`
-     - `cliente_id`, `producto_id`, `tiempo_id` → claves foráneas
-
+     - `valor_total` → `total_pagado`
+     - `producto_id` → `producto_id`
 ---
 
-## 🧪 Actividades del Taller
+## 🧪 Actividades Finales
 
-1. ¿Cuántos registros fueron excluidos por contener `"ERROR"` o `"UNKNOWN"`?
-2. ¿Cuántos registros tuvieron que recalcular `valor_total`?
-3. ¿Qué porcentaje de registros no encontraron coincidencia en las dimensiones?
-4. ¿Cómo se puede mejorar la calidad del archivo origen para futuras cargas?
-
+1. Crea un Job que corra ambas transformaciones.
 ---
